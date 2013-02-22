@@ -1,10 +1,22 @@
-= Description
+# Description
     The DBI package is a vendor independent interface for accessing databases.
     It is similar, but not identical to, Perl's DBI module.
 
-= Synopsis
+   Note, this gem is a fork of the dbi gem.  The orginal authors of the dbi gem
+   are not responsible for any new changes, and not necessarily all behavior
+   from the original DBI gem will be supported.
 
-    require 'dbi'
+   Additionally, this gem will only support Ruby 1.9 and up, since Ruby 1.8 is
+   at end of life.  This reason that this gem was forked was primarily to get
+   DBI to work on Ruby 1.9.  If you want to use DBI on 1.8, just use the dbi
+   gem.
+   
+-------------------
+
+
+# Synopsis
+
+    require 'connectator_dbi'
     
     # Connect to a database, old style
     dbh = DBI.connect('DBI:Mysql:test', 'testuser', 'testpwd')
@@ -50,88 +62,85 @@
       
     end
 
-= Prerequisites
-    Ruby 1.8.6 or later is the test target, however you may have success with
-    earlier 1.8.x versions of Ruby.
+# Prerequisites
 
-= RubyForge Project
-    General information: http://ruby-dbi.rubyforge.org
-    Project information: http://rubyforge.org/projects/ruby-dbi/
-    Downloads: http://rubyforge.org/frs/?group_id=234
+    Ruby 1.9.x
 
-= Installation
+# Installation
+
     There are many database drivers (DBDs) available.  You only need to install
     the DBDs for the database software that you will be using.
 
-== Gem setup:
+## Gem setup:
 
-    gem install dbi
+    gem install connectator-dbi
     # One or more of:
     gem install dbd-mysql
     gem install dbd-pg
     gem install dbd-sqlite3
     gem install dbd-sqlite
 
-== Without rubygems:
+## Source Code
 
-    ruby setup.rb config
-    ruby setup.rb setup
-    ruby setup.rb install
-
-== The bleeding edge:
-
-    git clone git://hollensbe.org/git/ruby-dbi.git
-    git checkout -b development origin/development
-    
-    Also available at
-    
-    git clone git://github.com/erikh/ruby-dbi.git
+    git clone git://github.com/durmstrang/connectator-dbi.git
       
-= Available Database Drivers (DBDs)
+# Available Database Drivers (DBDs)
 
-== DBD::MySQL
+## DBD::MySQL
+
     MySQL
     Depends on the mysql-ruby package from http://www.tmtm.org/mysql or
     available from the RAA.
 
-== DBD::ODBC
+## DBD::ODBC
+
     ODBC
     Depends on the ruby-odbc package (0.5 or later, 0.9.3 or later recommended) at
     http://www.ch-werner.de/rubyodbc or available from the RAA.  Works together
     with unix-odbc.
 
-== DBD::OCI8
+## DBD::OCI8
+
     OCI8 (Oracle)
     Depends on the the ruby-oci8 package, available on the RAA and RubyForge.
 
-== DBD::Pg
+## DBD::Pg
+
     PostgreSQL
     Depends on the pg package, available on RubyForge.
 
-== DBD::SQLite
+## DBD::SQLite
+
     SQLite (versions 2.x and earlier)
     Depends on the sqlite-ruby package, available on rubyforge.
 
-== DBD::SQLite3
+## DBD::SQLite3
+
     SQLite 3.x
     Depends on the sqlite3-ruby package, available on rubyforge.
 
-= Additional Documentation
+# Additional Documentation
+
     See the directories doc/* for DBI and DBD specific information.
     The DBI specification is at doc/DBI_SPEC.rdoc.
     The DBD specification is at doc/DBD_SPEC.rdoc.
 
-= Articles
-== Tutorial: Using the Ruby DBI Module
+# Articles
+
+## Tutorial: Using the Ruby DBI Module
     http://www.kitebird.com/articles/ruby-dbi.html
    
-= Applications
-== dbi
+# Applications
+
+## dbi
+
     The SQL command line interpreter dbi is available in directory
     bin/. It gets installed by default.
 
-= License
+# License
 
+   Copyright (c) 2013 Benjamin Wagaman
+   
    Copyright (c) 2008 Erik Hollensbe
 
    Copyright (c) 2005-2006 Kirk Haines, Francis Hwang, Patrick May and Daniel
@@ -167,8 +176,16 @@
    This is the BSD license which is less restrictive than GNU's GPL
    (General Public License).
 
-= Contributors
+# Contributors
+
+   This GEM is a fork of the dbi gem.  The orginal authors of the dbi gem are:
+
+   Erik Hollensbe
+
+   Christopher Maujean
    
+-------------------
+
    Pistos
       Too much to specify. Infinite patience and help.
 

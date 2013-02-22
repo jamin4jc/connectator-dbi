@@ -18,7 +18,7 @@ DBD_GEM_DEP_MAP = {
 #
 
 PACKAGE_FILES = %w(Rakefile build/rake_task_lib.rb setup.rb)
-DOC_FILES  = %w(README LICENSE ChangeLog)
+DOC_FILES  = %w(README LICENSE)
 EXCLUSIONS = %w(test/sql.log)
 DBD_FILES  = %w(test/DBD_TESTS)
 
@@ -175,7 +175,6 @@ RDoc::Task.new do |rd|
     rd.rdoc_dir = "rdoc"
     rd.main = "README"
     rd.rdoc_files.include("./README")
-    rd.rdoc_files.include("./ChangeLog")
     rd.rdoc_files.include("./LICENSE")
     rd.rdoc_files.include("./doc/**/*.rdoc")
     rd.rdoc_files.include("./lib/**/*.rb")

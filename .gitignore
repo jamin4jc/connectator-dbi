@@ -1,2 +1,3 @@
+*.gemspec
 rdoc
 test/sql.log
