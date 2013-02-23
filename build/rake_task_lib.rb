@@ -18,7 +18,7 @@ DBD_GEM_DEP_MAP = {
 #
 
 PACKAGE_FILES = %w(Rakefile build/rake_task_lib.rb setup.rb)
-DOC_FILES  = %w(README LICENSE)
+DOC_FILES  = %w(README.md LICENSE)
 EXCLUSIONS = %w(test/sql.log)
 DBD_FILES  = %w(test/DBD_TESTS)
 
@@ -54,14 +54,13 @@ end
 
 def boilerplate_spec
     gem = Gem::Specification.new 
-    gem.authors     = ['Erik Hollensbe', 'Christopher Maujean']
-    gem.email       = 'ruby-dbi-users@rubyforge.org'
-    gem.homepage    = 'http://www.rubyforge.org/projects/ruby-dbi'
+    gem.authors     = ['Benjamin Wagaman']
+    gem.email       = 'ben@wagaman.org'
+    gem.homepage    = 'http://github.com/durmstrang/connectator-dbi'
     gem.platform    = Gem::Platform::RUBY
     gem.has_rdoc    = true
     gem.extra_rdoc_files = DOC_FILES
-    gem.required_ruby_version = '>= 1.8.0'
-    gem.rubyforge_project = 'ruby-dbi'
+    gem.required_ruby_version = '>= 1.9.0'
     return gem
 end
 
@@ -173,8 +172,8 @@ end
 
 RDoc::Task.new do |rd|
     rd.rdoc_dir = "rdoc"
-    rd.main = "README"
-    rd.rdoc_files.include("./README")
+    rd.main = "README.md"
+    rd.rdoc_files.include("./README.md")
     rd.rdoc_files.include("./LICENSE")
     rd.rdoc_files.include("./doc/**/*.rdoc")
     rd.rdoc_files.include("./lib/**/*.rb")

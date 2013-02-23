@@ -1,3 +1,4 @@
 .rvmrc
 rdoc
 test/sql.log
+pkg

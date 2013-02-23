@@ -38,13 +38,13 @@ namespace :dbi do
     code_files = %w(examples/**/* bin/dbi build/Rakefile.dbi.rb lib/dbi.rb lib/dbi/**/*.rb test/ts_dbi.rb test/dbi/*)
 
     spec = boilerplate_spec
-    spec.name        = 'dbi'
+    spec.name        = 'connectator_dbi'
     spec.version     = DBI::VERSION
     spec.test_file   = 'test/ts_dbi.rb'
     spec.executables = ['dbi', 'test_broken_dbi']
     spec.files       = gem_files(code_files)
-    spec.summary     = 'A vendor independent interface for accessing databases, similar to Perl\'s DBI'
-    spec.description = 'A vendor independent interface for accessing databases, similar to Perl\'s DBI'
+    spec.summary     = 'A vendor independent interface for accessing databases, similar to Perl\'s DBI (compatible with Ruby 1.9)'
+    spec.description = 'A vendor independent interface for accessing databases, similar to Perl\'s DBI (compatible with Ruby 1.9)'
     gem 'deprecated', "~> 3.0"
 
     build_package_tasks(spec, code_files)
