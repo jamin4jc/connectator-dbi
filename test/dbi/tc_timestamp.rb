@@ -14,7 +14,7 @@ require 'date'
 require 'dbi'
 require 'test/unit'
 
-Deprecate.set_action(proc { })
+Deprecated.set_action {}
 
 class TC_DBI_Date < Test::Unit::TestCase
    def setup

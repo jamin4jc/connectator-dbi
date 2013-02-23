@@ -107,7 +107,7 @@ if __FILE__ == $0
         end
     end
 
-    Deprecate.set_action(proc { })
+    Deprecated.set_action {}
 
     config = DBDConfig.get_config
 
