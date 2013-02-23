@@ -38,7 +38,7 @@ namespace :dbi do
     code_files = %w(examples/**/* bin/dbi build/Rakefile.dbi.rb lib/dbi.rb lib/dbi/**/*.rb test/ts_dbi.rb test/dbi/*)
 
     spec = boilerplate_spec
-    spec.name        = 'connectator_dbi'
+    spec.name        = 'connectator-dbi'
     spec.version     = DBI::VERSION
     spec.test_file   = 'test/ts_dbi.rb'
     spec.executables = ['dbi', 'test_broken_dbi']
