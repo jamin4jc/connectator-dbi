@@ -37,7 +37,7 @@ module DBI; end
 
 begin
     require "rubygems"
-    gem "deprecated", "= 3.0.0"
+    gem 'deprecated', "~> 3.0"
 rescue LoadError
 end
 
